@@ -1,0 +1,145 @@
+<!-- this file is same as SimpleWebSite.html
+    Created this file to check favicon -->
+    <!--https://stackoverflow.com/questions/13780402/html-favicon-ico-wont-show-on-google-chrome-->
+
+    <!-- Finally, able to show favicon
+        source file should be index.html
+        make sure href="favicon.ico", even if the .ico file is in images folder
+        worked in Edge browser, but not in chrome-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWebDocument</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">    
+    <!--
+    <link rel="shortcut icon" href="http://www.urloftheimage.com/image.png" type="image/x-icon">
+    -->
+    <!--
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="shortcut icon" 
+      href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">
+
+      -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            padding: 80px;
+            text-align: center;
+            background:  #1abc9c; /* green background */;
+            color: white; /* white text color */
+        }
+
+        .header h1 {
+            color: red;
+            font-size: 40px;
+
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            overflow: hidden;  /* Hide overflow */
+            background-color: #333; /* Dark background color */
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            float: left; /* Make sure that the links stay side-by-side */
+            display: block; /* Change the display to block, for responsive reasons (see below) */
+            color: white; /* White text color */
+            text-align: center; /* Center the text */
+            padding: 14px 20px; /* Add some padding */
+            text-decoration: none;  /* Remove underline */
+        }
+
+        /* Right-aligned link */
+        .navbar a.right {
+            float: right; /* Float a link to the right csh???*/
+        }
+
+        .navbar a:hover {
+            background-color: #ddd; /* Grey background color */
+            color: black;  /* Black text color */
+        }
+
+        /* Set properties for flex container */
+        .row {
+            box-sizing: border-box;
+
+            /* Use flex for side bar and main bar */
+            display: flex;
+            /*flex-wrap: wrap; */
+            /*border: 1px solid black;*/
+
+            /* Flex direction */
+            flex-direction: row;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+
+        .sidebar {
+            flex: 30%; /* Set the width of the sidebar */
+            background-color: #f1f1f1; /* Grey background color */;
+            padding: 20px; /* Some padding */
+        }
+
+        .mainbar {
+            flex: 70%;/* Set the width of the main content */
+            background-color: antiquewhite; 
+            padding: 20px;  /* Some padding */
+        }
+
+        /* Add media / device size specific behaviour*/
+        /* Responsive layout - when the screen is less than 700px wide,
+         make the two columns stack on top of each other
+          instead of next to each other */
+        
+        @media screen and (max-width:700px) {
+            .row {
+                flex-direction: column;
+            }
+            
+        }
+          
+        .footer {
+            padding: 20px; /* Some padding */
+            text-align: center; /* Center text*/
+            background: #ddd; /* Grey background */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>My Website</h1>
+        <p>A website created by me.</p>
+    </div>
+
+    <!-- Navigation section-->
+    <div class="navbar">
+        <a href="#">Main</a>
+        <a href="#">Departments</a>
+        <a href="#">Solutions</a>
+        <a href="#">About Us</a>
+    </div>
+
+    <!--Create a 2-column layout, (flex container)
+         divided into a "side content" and a "main content".-->
+    <div class="row">
+        <div class="sidebar"></div>
+        <div class="mainbar"></div>
+
+    </div>
+
+    <!--At last, we will add a footer.-->
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+</body>
+</html>
